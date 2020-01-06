@@ -4,7 +4,7 @@ MERN CRUD app to manage mentors and assign tasks to them for a academy like usec
 
 ## Hosted on Heruko
 
-https://mern-starter.herokuapp.com/
+https://admin-panel-mern.herokuapp.com/
 
 ## Development setup
 
