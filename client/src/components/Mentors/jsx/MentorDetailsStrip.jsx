@@ -3,7 +3,6 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import axios from 'axios';
 import '../css/MentorDetailsStrip.css';
 export default class MentorDetailsStrip extends Component {
   constructor(props) {
@@ -13,7 +12,7 @@ export default class MentorDetailsStrip extends Component {
     };
   }
   handleOnClick = () => {
-    this.props.handleOnClick(this.state.mentor.email);
+    this.props.handleOnClick(this.state.mentor._id);
   };
   render() {
     const { name, email, mobile, qualification } = this.state.mentor;

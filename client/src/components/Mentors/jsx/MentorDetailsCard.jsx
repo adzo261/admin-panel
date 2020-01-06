@@ -29,7 +29,7 @@ export default class MentorDetailsCard extends Component {
     const {
       match: { params }
     } = this.props;
-    axios.get('/api/mentors/get/' + params.email).then(res =>
+    axios.get('/api/mentors/get/' + params.id).then(res =>
       this.setState({
         mentor: res.data.mentors[0],
         isLoading: false

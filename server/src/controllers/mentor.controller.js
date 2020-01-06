@@ -35,7 +35,7 @@ exports.getMentors = (req, res) => {
 };
 
 exports.getMentor = (req, res) => {
-  Mentors.get({ email: req.params.email }, (err, mentors) => {
+  Mentors.get({ _id: req.params.id }, (err, mentors) => {
     if (err) {
       res.json({
         error: err

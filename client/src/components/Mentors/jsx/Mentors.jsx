@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { Redirect } from 'react-router';
 import Modal from 'react-bootstrap/Modal';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import '../css/Mentors.css';

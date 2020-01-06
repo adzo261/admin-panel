@@ -23,11 +23,7 @@ const AdminPanel = () => (
     <Switch>
       <Route exact path="/" component={Mentors} />
       <Route exact path="/mentors" component={Mentors} />
-      <Route
-        exact
-        path="/mentor/details/:email"
-        component={MentorDetailsCard}
-      />
+      <Route exact path="/mentor/details/:id" component={MentorDetailsCard} />
       <Route exact path="/tasks" component={Tasks} />
       <Route component={Mentors} />
     </Switch>

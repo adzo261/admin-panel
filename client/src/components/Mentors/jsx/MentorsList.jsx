@@ -11,7 +11,7 @@ export default class MentorsList extends Component {
       isLoading: true,
       mentorsList: [],
       redirectToMentorDetailsCard: false,
-      clickedMentorsEmail: ''
+      clickedMentorsId: ''
     };
   }
 
@@ -23,10 +23,10 @@ export default class MentorsList extends Component {
       })
     );
   }
-  handleOnClick = email => {
+  handleOnClick = id => {
     this.setState({
       redirectToMentorDetailsCard: true,
-      clickedMentorsEmail: email
+      clickedMentorsId: id
     });
   };
   render() {
@@ -34,10 +34,10 @@ export default class MentorsList extends Component {
       isLoading,
       mentorsList,
       redirectToMentorDetailsCard,
-      clickedMentorsEmail
+      clickedMentorsId
     } = this.state;
     if (redirectToMentorDetailsCard) {
-      return <Redirect push to={'/mentor/details/' + clickedMentorsEmail} />;
+      return <Redirect push to={'/mentor/details/' + clickedMentorsId} />;
     }
     const mentors = [];
     for (const [index, mentor] of mentorsList.entries()) {

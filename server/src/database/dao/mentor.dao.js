@@ -11,7 +11,7 @@ MentorSchema.statics = {
     this.find(query, cb);
   },
 
-  getByEmail(query, cb) {
+  getById(query, cb) {
     this.find(query, cb);
   },
 
