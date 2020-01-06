@@ -79,11 +79,11 @@ export default class TaskForm extends Component {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Completition Percentage</Form.Label>
+          <Form.Label>Completion Percentage</Form.Label>
           <Form.Control
             type="number"
             id="completion"
-            placeholder="Completition Percentage of the task"
+            placeholder="Completion Percentage of the task"
             onChange={this.onChange}
             value={this.state.completion}
           />
