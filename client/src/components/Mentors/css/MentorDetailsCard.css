@@ -1,0 +1,25 @@
+.mentor-card-form-label {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 50%;
+  cursor: none;
+}
+
+.mentor-card {
+  margin: 4%;
+  text-align: center;
+}
+
+input {
+  outline: none;
+}
+.modal-details-btns {
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+
+.details-container {
+  text-align: center;
+  margin-top: 2%;
+}

@@ -1,0 +1,46 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Client",
+  "engines": {
+    "node": "12.13.1"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "start": "webpack-dev-server --hot --mode development",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "codeagni",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.4.1",
+    "npm-check-updates": "^4.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-loader-spinner": "^3.1.5",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@babel/register": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.2",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.1"
+  }
+}

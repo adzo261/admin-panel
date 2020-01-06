@@ -1,0 +1,20 @@
+.mentor-strip-form-label {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 50%;
+  cursor: none;
+}
+.mentor-strip {
+  margin-bottom: 2%;
+}
+.mentor-strip:hover {
+  background-color: rgb(241, 241, 241);
+}
+.mentor-strip:hover * {
+  cursor: pointer;
+}
+.mentor-strip-input {
+  text-align: center;
+  outline: none;
+}

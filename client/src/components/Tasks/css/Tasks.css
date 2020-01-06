@@ -1,0 +1,12 @@
+#tasks-container {
+  text-align: center;
+  margin: 2%;
+}
+#tasks-heading {
+  margin-left: 20%;
+  display: inline-block;
+}
+#tasks-btn-toolbar {
+  margin-left: 20%;
+  display: inline-block;
+}

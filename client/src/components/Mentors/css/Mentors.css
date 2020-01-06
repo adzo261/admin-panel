@@ -1,0 +1,12 @@
+#mentors-container {
+  text-align: center;
+  margin: 2%;
+}
+#mentors-heading {
+  margin-left: 25%;
+  display: inline-block;
+}
+#mentors-btn-toolbar {
+  margin-left: 20%;
+  display: inline-block;
+}
