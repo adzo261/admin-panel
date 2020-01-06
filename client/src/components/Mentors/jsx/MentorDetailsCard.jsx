@@ -5,13 +5,14 @@ import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import axios from 'axios';
+import Loader from 'react-loader-spinner';
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import '../css/MentorDetailsCard.css';
 import { Redirect } from 'react-router';
 import MentorForm from './MentorForm';
 import TasksList from '../../Tasks/jsx/TasksList';
-import Loader from 'react-loader-spinner';
+
 export default class MentorDetailsCard extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,7 @@ export default class MentorDetailsCard extends Component {
       redirectToHome: false
     };
   }
+
   componentDidMount() {
     const {
       match: { params }
@@ -34,26 +36,31 @@ export default class MentorDetailsCard extends Component {
       })
     );
   }
+
   setAddMentorModal = status => {
     this.setState({ isAddMentorModalActive: status });
     if (!status) {
       this.setState({ redirectToHome: true });
     }
   };
+
   setDeleteMentorModal = status => {
     this.setState({ isDeleteMentorModalActive: status });
   };
+
   deleteMentor = () => {
     axios
       .delete('/api/mentors/remove/' + this.state.mentor._id)
       .then(res => this.setState({ redirectToHome: true }));
   };
+
   render() {
     const { name, email, mobile, qualification } = this.state.mentor;
     const { isLoading, mentor, redirectToHome } = this.state;
     if (redirectToHome) {
       return <Redirect push to="/mentors" />;
     }
+
     return (
       <div>
         {isLoading && (

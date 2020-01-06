@@ -27,5 +27,8 @@ app.use('/api', dbRouter);
 app.use('/api/mentors', mentorsRouter);
 app.use('/api/tasks', tasksRouter);
 
+app.get('*', (request, response) => {
+  response.sendFile(path.join(__dirname, HTML_FILE));
+});
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`App listening on port: ${port}`));

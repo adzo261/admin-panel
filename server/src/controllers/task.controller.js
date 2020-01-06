@@ -51,7 +51,7 @@ exports.getTasks = (req, res) => {
 exports.updateTask = (req, res) => {
   const task = {
     category: req.body.category,
-    taskTask: req.body.taskBody,
+    taskBody: req.body.taskBody,
     mentor: req.body.mentor,
     completion: req.body.completion
   };
