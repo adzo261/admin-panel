@@ -9,7 +9,7 @@ import Database from '../database/database';
 
 const app = express();
 
-const DIST_DIR = path.join(__dirname, '../../../', 'client', 'dist');
+const DIST_DIR = path.join('../../../', 'client', 'dist');
 const HTML_FILE = path.join(DIST_DIR, 'index.html');
 app.use(express.static(DIST_DIR));
 
@@ -28,7 +28,7 @@ app.use('/api/mentors', mentorsRouter);
 app.use('/api/tasks', tasksRouter);
 
 app.get('*', (request, response) => {
-  response.sendFile(path.join(__dirname, HTML_FILE));
+  response.sendFile('index.html');
 });
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`App listening on port: ${port}`));
