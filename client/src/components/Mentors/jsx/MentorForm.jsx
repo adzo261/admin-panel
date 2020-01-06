@@ -41,6 +41,7 @@ export default class MentorForm extends Component {
         .then(res => console.log(res));
     }
     this.props.setAddMentorModal(false);
+    window.location.reload();
   };
   render() {
     return (

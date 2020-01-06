@@ -16,8 +16,7 @@ export default class TaskDetailsCard extends Component {
     this.state = {
       task: this.props.task,
       isAddTaskModalActive: false,
-      isDeleteTaskModalActive: false,
-      redirectToTasksPage: false
+      isDeleteTaskModalActive: false
     };
   }
   setAddTaskModal = status => {
@@ -25,21 +24,15 @@ export default class TaskDetailsCard extends Component {
   };
   setDeleteTaskModal = status => {
     this.setState({ isDeleteTaskModalActive: status });
-    if (!status) {
-      this.setState({ redirectToTasksPage: true });
-    }
   };
   deleteTask = () => {
     axios
       .delete('/api/tasks/remove/' + this.state.task._id)
-      .then(res => this.setState({ redirectToTasksPage: true }));
+      .then(res => window.location.reload());
   };
   render() {
     const { category, taskBody, mentor, completion } = this.state.task;
-    const { task, redirectToTasksPage } = this.state;
-    if (redirectToTasksPage) {
-      return <Redirect to="/tasks" />;
-    }
+    const { task } = this.state;
     return (
       <div>
         <Card className="task-card">

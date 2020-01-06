@@ -20,9 +20,6 @@ export default class Mentors extends Component {
 
   setAddMentorModal = status => {
     this.setState({ isAddMentorModalActive: status });
-    if (!status) {
-      window.location.reload();
-    }
   };
   render() {
     return (

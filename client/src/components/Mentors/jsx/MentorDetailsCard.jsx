@@ -39,9 +39,6 @@ export default class MentorDetailsCard extends Component {
 
   setAddMentorModal = status => {
     this.setState({ isAddMentorModalActive: status });
-    if (!status) {
-      this.setState({ redirectToHome: true });
-    }
   };
 
   setDeleteMentorModal = status => {

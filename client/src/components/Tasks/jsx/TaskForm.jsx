@@ -42,6 +42,7 @@ export default class TaskForm extends Component {
         .then(res => console.log(res));
     }
     this.props.setAddTaskModal(false);
+    window.location.reload();
   };
 
   render() {

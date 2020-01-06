@@ -16,9 +16,6 @@ export default class Tasks extends Component {
 
   setAddTaskModal = status => {
     this.setState({ isAddTaskModalActive: status });
-    if (!status) {
-      window.location.reload();
-    }
   };
   render() {
     return (
